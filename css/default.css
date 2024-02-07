@@ -1,0 +1,87 @@
+@charset "utf-8";
+
+body {
+  margin: 2px 10px 2px 10px;
+  padding:2px 10px 2px 10px;
+	font-weight: 400;
+	font-size: 18px;
+	height: 100%;
+	text-align: left;
+	background:#f8f6f3;
+	color: #000;
+	font-family: "Shippori Mincho", "ヒラギノ明朝", serif;
+}
+
+a {
+font-weight:bold;
+text-decoration:none;
+}
+a:link {
+  color:#817792;
+}
+a:visited {
+color:#7e64b0;
+}
+a:hover {
+color:#d97e99;
+text-decoration:underline;
+}
+
+pre{
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+code {
+  display: inline-block;
+  margin: 0px 2px;
+  padding: 2px 4px;
+  color: #373743;
+  background-color: #e9ebef;
+  border-radius: 3px;
+  border: solid 1px #d6dde4;
+  font-family: "Ricty Diminished";
+  font-size: 16px;
+}
+p code {
+  display: inline-block;
+  margin: 0px 2px;
+  padding: 2px 4px;
+  color: #373743;
+  background-color: #ebeef4;
+  border-radius: 3px;
+  border: solid 1px #d6dde4;
+  font-family: "Ricty Diminished";
+  font-size: 18px;
+}
+
+h1 {
+  font-size:50px;
+}
+h2 {
+  border-bottom:1px solid #999999;
+}
+h3 {
+  padding:5px 0px 3px 15px;
+  margin-right: 20px;
+}
+h4 {
+  padding-left: 15px;
+}
+
+p {
+  font-size: 18px;
+}
+
+summary {
+  cursor: pointer;
+  transition: 0.2s;
+}
+summary:hover {
+  cursor: pointer;
+  background-color: #eae8e7;
+}
+
+::selection {
+  background-color: #c2c6f8;
+}
