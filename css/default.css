@@ -9,7 +9,7 @@ body {
 	text-align: left;
 	background:#f8f6f3;
 	color: #000;
-	font-family: "Shippori Mincho", "ヒラギノ明朝", serif;
+	font-family: "Shippori Mincho", 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
 }
 
 a {
