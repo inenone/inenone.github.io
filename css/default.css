@@ -26,6 +26,7 @@ header {
 
 header .gnav .menu {
 	display: flex;
+	align-items: right;
 }
 
 header .gnav .menu li {
