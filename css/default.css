@@ -24,6 +24,10 @@ header {
 	display: flex;
 }
 
+header nav {
+	float: right;
+}
+
 header .gnav .menu {
 	display: flex;
 }
