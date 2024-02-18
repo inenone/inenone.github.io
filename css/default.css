@@ -1,20 +1,8 @@
 @charset "utf-8";
 
-body {
-  margin: 2px 10px 2px 10px;
-  padding-top: 90px;
-  font-weight: 400;
-  font-size: 18px;
-  height: 100%;
-  text-align: left;
-  background:#f8f6f3;
-  color: #000;
-  font-family: "Shippori Mincho", 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
-}
-
 header {
   width: 100%;
-  height: 60px;
+  height: 75px;
   background-color: rgba(200, 200, 200, 0.75);
   box-sizing: border-box;
   position: fixed;
@@ -28,9 +16,136 @@ header li {
   padding: 0 10px
 }
 
-.gnav {
-  display: flex;
-  justify-content: flex-end;
+/*---------------*/
+
+.logo {
+    width: 140px;
+    margin-left: 10px;
+}
+
+/*ハンバーガーアイコン*/
+.btn-burger {
+  cursor: pointer;
+  display: block;
+  width: 56px;
+  height: 60px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+/*ハンバーガーアイコンを作る三本線*/
+.icon, .icon:before, .icon:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 2px; /*線の太さ*/
+  width: 35px; /*線の長さ*/
+  background-color: #444;
+  border-radius: 2px;
+  display: block;
+  content: '';
+  cursor: pointer;
+  margin: auto;
+}
+
+/*三本線の間隔*/
+.icon:before {
+  top: 20px;
+}
+.icon:after {
+  top: -20px;
+}
+
+/*チェックボックス非表示*/
+.nav-toggle {
+  display: none;
+}
+
+/*アイコンをクリックしたら*/
+.nav-toggle:checked ~ .btn-burger .icon {
+  background: transparent;
+}
+.nav-toggle:checked ~ .btn-burger .icon:before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.nav-toggle:checked ~ .btn-burger .icon:after {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.icon,
+.icon:before,
+.icon:after {
+    transition: all .8s;
+}
+
+/*中身*/
+.nav {
+  background-color: rgba(208, 203, 185, 0.9);
+}
+.nav-list a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav-list {
+  list-style: none;
+  display: none;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.nav-list li {
+    padding: 10px;
+}
+
+.nav-toggle:checked ~ .nav .nav-list {
+    display: block;
+}
+
+@media screen and (min-width: 600px) {
+  /* ハンバーガーボタン */
+  .btn-burger {
+    display: none;  /*600px以上では使用しない */
+  }
+  
+  header {
+    padding: 30px 0 0;
+  }
+  .logo {
+    display: none;
+  }
+  .nav-toggle:checked ~ .nav .nav-list {
+      display: none;
+  }
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    background-color: transparent;
+  }
+  
+  .nav-list {
+    display: flex;
+  }
+}
+
+/*-----------------------*/
+
+body {
+  margin: 2px 10px 2px 10px;
+  padding-top: 90px;
+  font-weight: 400;
+  font-size: 18px;
+  height: 100%;
+  text-align: left;
+  background:#f8f6f3;
+  color: #000;
+  font-family: "Shippori Mincho", 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
 }
 
 .mainvisual img{
@@ -43,7 +158,8 @@ header li {
 }
 
 .wrapper{
-  width: 500px;
+  width: 100%;
+  max-width: 600px;
   padding: 8px;
   border: .5px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
